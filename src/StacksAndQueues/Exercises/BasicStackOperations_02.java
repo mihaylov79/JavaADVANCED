@@ -8,7 +8,7 @@ public class BasicStackOperations_02 {
 
         String parameters = kbInput.nextLine();
 
-                int popLength = Integer.parseInt(parameters.split(" ")[1]);
+        int popLength = Integer.parseInt(parameters.split(" ")[1]);
         int elementX = Integer.parseInt(parameters.split(" ")[2]);
 
         Deque<Integer> stack = new ArrayDeque<>();
