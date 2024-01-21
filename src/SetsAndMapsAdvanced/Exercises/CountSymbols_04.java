@@ -24,8 +24,11 @@ public class CountSymbols_04 {
             }
 
         }
+        //line.entrySet().stream().forEach(ch ->
+        // System.out.printf("%c: %d time/s%n", ch.getKey(), ch.getValue()));
 
-        line.forEach((key, value) -> System.out.printf("%c: %d time/s%n", key, value));
+
+       line.forEach((key, value) -> System.out.printf("%c: %d time/s%n", key, value));
 
 //        for (Map.Entry<Character,Integer> entry: line.entrySet()){
 //
