@@ -1,4 +1,4 @@
-package MultidimentionalArrays.Exercises;
+package FunctinalPrograming.Exercises;
 
 import java.util.Arrays;
 import java.util.Scanner;
