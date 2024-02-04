@@ -12,16 +12,23 @@ public class Main {
         List<Person> personList = new ArrayList<>();
 
 
+
+
         for (int i = 0; i < personQuantity; i++) {
 
-            Person person = new Person(kbInput.nextLine().split("\\s+")[0],
-                    Integer.parseInt(kbInput.nextLine().split("\\s+")[1]) );
+            String inputData = kbInput.nextLine();
+
+            String name = inputData.split("\\s+")[0];
+            int age = Integer.parseInt(inputData.split("\\s+")[1]);
+
+            Person person = new Person(name,age);
 
             personList.add(person);
 
         }
 
-        personList.stream().filter(person -> person.getAge() > 30).forEach(System.out::println);
+        personList.stream().filter(person -> person.getAge() > 30)
+                          .sorted().forEach(System.out::println);
 
     }
 
