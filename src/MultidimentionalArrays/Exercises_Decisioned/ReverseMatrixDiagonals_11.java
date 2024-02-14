@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class ReverseMatrixDiagonals_11 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int [] dimensions = Arrays.stream(scanner.nextLine().split(" "))
+        Scanner kbInput = new Scanner(System.in);
+        int [] dimensions = Arrays.stream(kbInput.nextLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray(); //[4, 5]
         int rows = dimensions[0]; //брой редове
@@ -15,7 +15,7 @@ public class ReverseMatrixDiagonals_11 {
         int [][] matrix = new int[rows][cols];
 
         //1. въвеждаме матрицата
-        fillMatrix(matrix, scanner);
+        fillMatrix(matrix, kbInput);
 
         //2. Print First Part
         for (int c = cols - 1; c > 0; c--) { //за всеки един диагонал
