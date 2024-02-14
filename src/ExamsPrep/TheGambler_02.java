@@ -11,11 +11,7 @@ public class TheGambler_02 {
 
         String[][] matrix = new String[size][size];
 
-        for (int i = 0; i < size; i++) {
-
-            matrix[i] = Arrays.stream(kbInput.nextLine().split("")).toArray(String[]::new);
-
-        }
+        fillTheMatrix(size, matrix, kbInput);
 
         int ammount = 100;
 
@@ -37,7 +33,6 @@ public class TheGambler_02 {
             if (isFound){
                 break;
             }
-
         }
 
         String command = kbInput.nextLine();
@@ -211,6 +206,14 @@ public class TheGambler_02 {
             printMatrix(matrix);
         }
 
+    }
+
+    private static void fillTheMatrix(int row, String[][] matrix, Scanner kbInput) {
+        for (int i = 0; i < row; i++) {
+
+            matrix[i] = Arrays.stream(kbInput.nextLine().split("")).toArray(String[]::new);
+
+        }
     }
 
     private static void printMatrix(String[][] matrix) {
