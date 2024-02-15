@@ -32,9 +32,9 @@ public class Magazine {
         return this.data.stream().min(Comparator.comparing(Cloth::getSize)).orElse(null);
     }
 
-    public String getCloth(String color){
+    public Cloth getCloth(String color){
 
-        return this.data.stream().filter(c -> c.getColor().equals(color)).toString().trim();
+        return this.data.stream().filter(c -> c.getColor().equals(color)).findFirst().orElse(null);
     }
 
     public int getCount(){
@@ -44,7 +44,7 @@ public class Magazine {
 
     public String report(){
         StringBuilder sb = new StringBuilder();
-        sb.append(this.type).append("magazine contains");
+        sb.append(this.type).append(" magazine contains:");
         sb.append(System.lineSeparator());
         data.forEach(c-> sb.append(c.toString()).append(String.format(System.lineSeparator())));
         return sb.toString().trim();
