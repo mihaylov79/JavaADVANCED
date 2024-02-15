@@ -237,27 +237,27 @@ public class MouseInTheKitchen_02 {
         }
     }
 
-    private static boolean isValid(String command, int row, int col,int colSize,int rowSize){
+    private static boolean isValid(String command, int rowPos, int colPos,int colSize,int rowSize){
 
-        int row1=row;
-        int col1 = col;
+        int row=rowPos;
+        int col = colPos;
 
         switch (command){
 
             case "up":
-                row1 = row - 1;
+                row = rowPos - 1;
                 break;
             case "down":
-                row1 = row + 1;
+                row = rowPos + 1;
                 break;
             case "left":
-                col1 = col - 1;
+                col = colPos - 1;
                 break;
             case "right":
-                col1 = col + 1;
+                col = colPos + 1;
         }
 
-        return (row1 >= 0 && row1 < rowSize) && (col1 >=0 && col1 < colSize);
+        return (row >= 0 && row < rowSize) && (col >=0 && col < colSize);
     }
 
     private static void printMatrix(String[][] matrix) {

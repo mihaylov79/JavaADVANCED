@@ -19,12 +19,10 @@ public class TheGambler_02 {
         int colPos = 0;
 
         for (int i = 0; i < matrix.length; i++) {
-
             boolean isFound = false;
             for (int j = 0; j < matrix[i].length; j++) {
 
                 if (matrix[i][j].equalsIgnoreCase("G")){
-
                     rowPos = i;
                     colPos = j;
                     isFound = true;
