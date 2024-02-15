@@ -45,7 +45,8 @@ public class Kindergarten {
         sb.append("Registered children in ").append(this.name).append(":");
         registry.stream().sorted(Comparator.comparing(Child::getAge).
                         thenComparing(Child::getFirstName).thenComparing(Child::getLastName)).
-                        forEach(child -> sb.append(String.format(System.lineSeparator())).append("--").append(String.format(System.lineSeparator())).append(child.toString()));
+                        forEach(child -> sb.append(String.format(System.lineSeparator())).append("--").
+                        append(String.format(System.lineSeparator())).append(child.toString()));
         return sb.toString().trim();
 
     }
